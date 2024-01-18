@@ -1,5 +1,9 @@
 const parseCode = (str) => {
   // Split the input string by "000" to get an array of firstName, lastName, and id
+
+	if (!str) {
+    return null; // or handle it according to your use case
+  }
   const [firstName, lastName, id] = str.split("000");
 
   // Remove leading zeros from the id
@@ -16,3 +20,4 @@ const parseCode = (str) => {
 // Do not change the code below
 const str = prompt("Enter str: ");
 alert(JSON.stringify(parseCode(str)));
+
